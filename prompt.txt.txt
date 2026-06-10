@@ -1,0 +1,811 @@
+Where is the folder icon
+
+From your screenshot, File Explorer is already open — it's the window on the right side showing:
+
+Desktop
+Documents
+Downloads
+Pictures
+Videos
+
+with the title "Home" at the top.
+
+If you need to open it again in Windows:
+
+Method 1 (Fastest)
+
+Press:
+
+Windows + E
+Method 2
+
+Click the Start button and type:
+
+File Explorer
+
+Then press Enter.
+
+Method 3
+
+Right-click the Start button and select File Explorer.
+
+To find your file
+
+In the File Explorer window that's already open:
+
+Click Desktop in the left sidebar.
+Open the folder 2d-graphics-editor.
+You should see main.c.txt there.
+Right-click it → Rename → change it to main.c.
+
+If you don't see the file, send a screenshot of the Desktop → 2d-graphics-editor folder contents and I'll point to the exact item.
+
+Where is it
+
+I can see it in your screenshot.
+
+Look in the Recent section in the middle of the window. There is a file named main.c (second item in the list).
+
+The path shown underneath it is:
+
+Desktop\2d-graphics-editor
+
+So your file is already named main.c in File Explorer.
+
+Now go back to PowerShell and run:
+
+dir
+
+Tell me exactly what it shows.
+
+If Git still reports main.c.txt but File Explorer shows main.c, we'll check whether:
+
+You're in a different folder, or
+Windows is hiding extensions and the file is actually main.c.txt.
+
+Please paste the output of:
+
+dir
+
+from inside:
+
+C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor
+
+and I'll tell you the next command to run.Yes, that's the correct command. Run:
+
+git commit -m "Initial commit"
+
+If Git is configured correctly, the commit will be created.
+
+If you get an error like:
+
+Author identity unknown
+
+then set your name and email first:
+
+git config --global user.name "Shweta"
+git config --global user.email "your-email@example.com"
+
+and then run:
+
+git commit -m "Initial commit"
+
+Paste the output you get after running the commit command, and I'll help with the next step.
+
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git commit -m "Initial commit"
+[master (root-commit) 220abd5] Initial commit
+ 1 file changed, 186 insertions(+)
+ create mode 100644 main.c
+
+Great! 🎉 Your first commit was successful.
+
+The message:
+
+[master (root-commit) 220abd5] Initial commit
+
+means:
+
+✅ Git repository initialized
+✅ main.c added to Git
+✅ First commit created successfully
+
+You can verify everything is clean with:
+
+git status
+
+Expected output:
+
+On branch master
+nothing to commit, working tree clean
+Next step: Push to GitHub (optional)
+
+If you want this project on GitHub:
+
+Create a new repository on GitHub (don't add a README).
+Tell me the repository name, or paste the GitHub repository URL.
+
+For example:
+
+https://github.com/your-username/2d-graphics-editor.git
+
+and I'll give you the exact commands to connect your local repository and push it. 🚀
+
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git status
+On branch master
+nothing to commit, working tree cleanPS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git init
+Initialized empty Git repository in C:/Users/shwet/OneDrive/Desktop/2d-graphics-editor/.git/
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        main.c.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> dir
+
+
+    Directory: C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor
+
+
+Mode                 LastWriteTime         Length Name                                                                             
+----                 -------------         ------ ----                                                                             
+-a---l        10-06-2026     14:06           4057 main.c.txt                                                                       
+
+
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> Rename-Item "main.c.txt" "main.c"
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> dir
+
+
+    Directory: C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor
+
+
+Mode                 LastWriteTime         Length Name                                                                             
+----                 -------------         ------ ----                                                                             
+-a---l        10-06-2026     14:06           4057 main.c                                                                           
+
+
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git add main.c
+>> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   main.c
+
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git commit -m "Initial commit"
+[master (root-commit) 220abd5] Initial commit
+ 1 file changed, 186 insertions(+)
+ create mode 100644 main.c
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git log --oneline
+220abd5 (HEAD -> master) Initial commit
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git add .
+>> git commit -m "Describe your changes"
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git add .
+>> git commit -m "Describe your changes"
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git add .
+>> git commit -m "Describe your changes"
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git add main.c
+>> git commit -m "Added comment to main.c"
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor>                                                                                    What next ??
+
+You've completed the Git part successfully. ✅
+
+What happened:
+
+git init → created a repository.
+Renamed main.c.txt → main.c.
+git add main.c → staged the file.
+git commit -m "Initial commit" → created your first commit.
+git status → shows working tree clean.
+
+The reason these commands don't create another commit:
+
+git add .
+git commit -m "Describe your changes"
+
+is that you haven't changed main.c since the first commit.
+
+If your assignment is only about Git
+
+You're done.
+
+If you need another commit
+Open main.c in your editor.
+Add a small change, for example:
+// Version 2
+Save the file.
+Run:
+git status
+
+You should see:
+
+modified: main.c
+Then:
+git add main.c
+git commit -m "Updated main.c"
+If you need to upload to GitHub
+
+Create a repository on GitHub, then run:
+
+git remote add origin https://github.com/YOUR_USERNAME/2d-graphics-editor.git
+git push -u origin master
+
+Tell me what you're trying to accomplish next:
+
+Create another commit?
+Push to GitHub?
+Submit an assignment?
+Continue developing the C program?
+
+I can guide you through the exact next steps.Check this out
+Chcek this out
+
+Perfect! 🎉
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+This means:
+
+✅ Your code has been pushed to GitHub.
+✅ Your local folder and GitHub repository match.
+✅ There are no pending changes to upload.
+✅ Git is fully set up and working.
+Verify on GitHub
+
+Refresh your GitHub repository page. You should see:
+
+main.c
+main.c.txt (if you pushed it)
+Your commit history
+When you make future changes
+
+After editing and saving your code:
+
+git status
+git add .
+git commit -m "Describe what you changed"
+git push
+Check what is on GitHub
+
+You can also see your commit history:
+
+git log --oneline
+
+At this point, your repository is successfully connected and synchronized with GitHub. 🚀
+
+One question: does your 2D Graphics Editor project consist of only main.c, or do you have additional files (headers, images, project files, etc.) that you also want uploaded?
+
+There are two repositories what to do 
+
+You have two repositories:
+
+2d-graphics-editor
+2D-Graphic-Editor-C
+
+That's okay. GitHub allows multiple repositories.
+
+The important question is: Which repository did you push your code to?
+
+Run this command in PowerShell:
+
+git remote -v
+
+You'll see something like:
+
+origin  https://github.com/shwetack148-collab/2D-Graphic-Editor-C.git (fetch)
+origin  https://github.com/shwetack148-collab/2D-Graphic-Editor-C.git (push)
+
+or
+
+origin  https://github.com/shwetack148-collab/2d-graphics-editor.git (fetch)
+origin  https://github.com/shwetack148-collab/2d-graphics-editor.git (push)
+
+That tells us which repository is connected to your local project.
+
+What I recommend
+
+Keep one repository and use it for your project. Since you recently created 2D-Graphic-Editor-C and pushed code to it, you can use that one and ignore or delete the other repository.
+
+Quick check
+
+Click 2D-Graphic-Editor-C in the left sidebar. If you see:
+
+main.c
+main.c.txt
+commit history
+
+then that is the repository containing your code.I want to delete the 1 and 3 one how to 
+
+Yes. To fully satisfy the assignment, you should support:
+
+✅ Draw Line
+✅ Draw Rectangle
+✅ Draw Circle
+✅ Draw Triangle
+✅ Add Objects
+✅ Delete Objects
+✅ Modify Objects
+✅ Display Picture
+✅ Clear Picture
+✅ Store picture in a 2D character array
+
+A clean way to do this is to draw and erase shapes using the same algorithms.
+
+Here's a complete version with all required functions:
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+#define ROWS 30
+#define COLS 60
+
+char canvas[ROWS][COLS];
+
+void initializeCanvas()
+{
+    for(int i=0;i<ROWS;i++)
+        for(int j=0;j<COLS;j++)
+            canvas[i][j]='_';
+}
+
+void displayCanvas()
+{
+    printf("\n");
+
+    for(int i=0;i<ROWS;i++)
+    {
+        for(int j=0;j<COLS;j++)
+            printf("%c ",canvas[i][j]);
+
+        printf("\n");
+    }
+}
+
+void plot(int x,int y,char ch)
+{
+    if(x>=0 && x<ROWS && y>=0 && y<COLS)
+        canvas[x][y]=ch;
+}
+
+/* ---------- LINE ---------- */
+
+void drawLineGeneric(int x1,int y1,int x2,int y2,char ch)
+{
+    int dx=abs(x2-x1);
+    int dy=abs(y2-y1);
+
+    int sx=(x1<x2)?1:-1;
+    int sy=(y1<y2)?1:-1;
+
+    int err=dx-dy;
+
+    while(1)
+    {
+        plot(x1,y1,ch);
+
+        if(x1==x2 && y1==y2)
+            break;
+
+        int e2=2*err;
+
+        if(e2>-dy)
+        {
+            err-=dy;
+            x1+=sx;
+        }
+
+        if(e2<dx)
+        {
+            err+=dx;
+            y1+=sy;
+        }
+    }
+}
+
+/* ---------- RECTANGLE ---------- */
+
+void drawRectangleGeneric(int x,int y,int w,int h,char ch)
+{
+    for(int i=y;i<y+w;i++)
+    {
+        plot(x,i,ch);
+        plot(x+h-1,i,ch);
+    }
+
+    for(int i=x;i<x+h;i++)
+    {
+        plot(i,y,ch);
+        plot(i,y+w-1,ch);
+    }
+}
+
+/* ---------- CIRCLE ---------- */
+
+void drawCircleGeneric(int xc,int yc,int r,char ch)
+{
+    for(int angle=0;angle<360;angle++)
+    {
+        double rad=angle*M_PI/180.0;
+
+        int x=xc+(int)(r*cos(rad));
+        int y=yc+(int)(r*sin(rad));
+
+        plot(x,y,ch);
+    }
+}
+
+/* ---------- TRIANGLE ---------- */
+
+void drawTriangleGeneric(
+        int x1,int y1,
+        int x2,int y2,
+        int x3,int y3,
+        char ch)
+{
+    drawLineGeneric(x1,y1,x2,y2,ch);
+    drawLineGeneric(x2,y2,x3,y3,ch);
+    drawLineGeneric(x3,y3,x1,y1,ch);
+}
+
+/* ---------- DRAW FUNCTIONS ---------- */
+
+void drawLine()
+{
+    int x1,y1,x2,y2;
+
+    printf("Enter x1 y1 x2 y2: ");
+    scanf("%d%d%d%d",&x1,&y1,&x2,&y2);
+
+    drawLineGeneric(x1,y1,x2,y2,'*');
+}
+
+void drawRectangle()
+{
+    int x,y,w,h;
+
+    printf("Enter x y width height: ");
+    scanf("%d%d%d%d",&x,&y,&w,&h);
+
+    drawRectangleGeneric(x,y,w,h,'*');
+}
+
+void drawCircle()
+{
+    int x,y,r;
+
+    printf("Enter center_x center_y radius: ");
+    scanf("%d%d%d",&x,&y,&r);
+
+    drawCircleGeneric(x,y,r,'*');
+}
+
+void drawTriangle()
+{
+    int x1,y1,x2,y2,x3,y3;
+
+    printf("Enter x1 y1 x2 y2 x3 y3: ");
+    scanf("%d%d%d%d%d%d",
+          &x1,&y1,
+          &x2,&y2,
+          &x3,&y3);
+
+    drawTriangleGeneric(
+        x1,y1,
+        x2,y2,
+        x3,y3,
+        '*');
+}
+
+/* ---------- DELETE FUNCTIONS ---------- */
+
+void deleteLine()
+{
+    int x1,y1,x2,y2;
+
+    printf("Enter line coordinates: ");
+    scanf("%d%d%d%d",&x1,&y1,&x2,&y2);
+
+    drawLineGeneric(x1,y1,x2,y2,'_');
+}
+
+void deleteRectangle()
+{
+    int x,y,w,h;
+
+    printf("Enter rectangle data: ");
+    scanf("%d%d%d%d",&x,&y,&w,&h);
+
+    drawRectangleGeneric(x,y,w,h,'_');
+}
+
+void deleteCircle()
+{
+    int x,y,r;
+
+    printf("Enter circle data: ");
+    scanf("%d%d%d",&x,&y,&r);
+
+    drawCircleGeneric(x,y,r,'_');
+}
+
+void deleteTriangle()
+{
+    int x1,y1,x2,y2,x3,y3;
+
+    printf("Enter triangle coordinates: ");
+    scanf("%d%d%d%d%d%d",
+          &x1,&y1,
+          &x2,&y2,
+          &x3,&y3);
+
+    drawTriangleGeneric(
+        x1,y1,
+        x2,y2,
+        x3,y3,
+        '_');
+}
+
+/* ---------- MODIFY FUNCTIONS ---------- */
+
+void modifyLine()
+{
+    printf("\nDelete old line\n");
+    deleteLine();
+
+    printf("\nDraw new line\n");
+    drawLine();
+}
+
+void modifyRectangle()
+{
+    printf("\nDelete old rectangle\n");
+    deleteRectangle();
+
+    printf("\nDraw new rectangle\n");
+    drawRectangle();
+}
+
+void modifyCircle()
+{
+    printf("\nDelete old circle\n");
+    deleteCircle();
+
+    printf("\nDraw new circle\n");
+    drawCircle();
+}
+
+void modifyTriangle()
+{
+    printf("\nDelete old triangle\n");
+    deleteTriangle();
+
+    printf("\nDraw new triangle\n");
+    drawTriangle();
+}
+
+/* ---------- MAIN ---------- */
+
+int main()
+{
+    initializeCanvas();
+
+    int choice;
+
+    while(1)
+    {
+        printf("\n===== 2D GRAPHICS EDITOR =====\n");
+
+        printf("1. Draw Line\n");
+        printf("2. Draw Rectangle\n");
+        printf("3. Draw Circle\n");
+        printf("4. Draw Triangle\n");
+
+        printf("5. Delete Line\n");
+        printf("6. Delete Rectangle\n");
+        printf("7. Delete Circle\n");
+        printf("8. Delete Triangle\n");
+
+        printf("9. Modify Line\n");
+        printf("10. Modify Rectangle\n");
+        printf("11. Modify Circle\n");
+        printf("12. Modify Triangle\n");
+
+        printf("13. Display Picture\n");
+        printf("14. Clear Picture\n");
+
+        printf("0. Exit\n");
+
+        printf("Enter choice: ");
+        scanf("%d",&choice);
+
+        switch(choice)
+        {
+            case 1: drawLine(); break;
+            case 2: drawRectangle(); break;
+            case 3: drawCircle(); break;
+            case 4: drawTriangle(); break;
+
+            case 5: deleteLine(); break;
+            case 6: deleteRectangle(); break;
+            case 7: deleteCircle(); break;
+            case 8: deleteTriangle(); break;
+
+            case 9: modifyLine(); break;
+            case 10: modifyRectangle(); break;
+            case 11: modifyCircle(); break;
+            case 12: modifyTriangle(); break;
+
+            case 13: displayCanvas(); break;
+
+            case 14:
+                initializeCanvas();
+                printf("Canvas Cleared.\n");
+                break;
+
+            case 0:
+                return 0;
+
+            default:
+                printf("Invalid Choice.\n");
+        }
+    }
+
+    return 0;
+}
+
+This version fulfills all the requirements listed in your assignment and is suitable for submission as a menu-driven 2D Graphics Editor using a 2D character array.
+
+I want to delete one of them
+
+Yes. In your GitHub repository screenshot, I can see two files:
+
+main.c
+main.c.txt
+
+Since main.c is the correct C source file, you can delete main.c.txt.
+
+Option 1: Delete from GitHub Website
+Click main.c.txt in the left file list.
+Click the trash can icon (or the ⋯ menu → Delete file) near the top-right.
+Scroll down.
+Enter a commit message like:It is getting saved as main.c.txt what to do 
+There are 2 main.c there what to do ??
+
+
+Perfect — Git now detects your changes in main.c.
+
+Run these commands one by one:
+
+1. Add the modified file
+git add main.c
+2. Commit the changes
+git commit -m "Updated 2D graphics editor"
+3. Push to GitHub
+git push
+4. Verify
+git status
+
+Expected output:
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+After running git push, refresh your GitHub repository page and the latest commit time should update to just now.
+
+If git push gives any error, paste the complete output here and I'll tell you the exact next command.
+
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git add main.c
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git commit -m "Updated 2D graphics editor"
+[main f68151e] Updated 2D graphics editor
+ 1 file changed, 247 insertions(+), 113 deletions(-)
+
+Great! ✅ The commit was created successfully:
+
+[main f68151e] Updated 2D graphics editor
+
+Now run:
+
+git push
+
+After it finishes, you should see something like:
+
+Enumerating objects: ...
+Writing objects: ...
+To https://github.com/shwetack148-collab/2D-graphic-editor-.git
+   e5791c1..f68151e  main -> main
+
+Then:
+
+Refresh your GitHub repository page.
+You should see the latest commit "Updated 2D graphics editor".
+Click main.c and verify your new code is there.
+
+Paste the output of git push if anything unusual appears.
+
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git commit -m "Updated 2D graphics editor"
+[main f68151e] Updated 2D graphics editor
+ 1 file changed, 247 insertions(+), 113 deletions(-)
+PS C:\Users\shwet\OneDrive\Desktop\2d-graphics-editor> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.60 KiB | 1.60 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/shwetack148-collab/2D-graphic-editor-.git
+   e5791c1..f68151e  main -> main
+PS C:\Users\shwet\OneDrive\Desktop\2d
+
+Excellent! 🎉
+
+Your updated code has been successfully pushed to GitHub.
+
+The important line is:
+
+e5791c1..f68151e  main -> main
+
+This means:
+
+f68151e = your new commit
+main -> main = pushed successfully to the GitHub repository
+Your GitHub repository now contains the latest version of main.c
+Verify
+
+Refresh your GitHub page and you should see:
+
+Updated 2D graphics editor
+
+as the latest commit message.
+
+You can also run:
+
+git status
+
+Expected:
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+For future changes
+
+Whenever you edit main.c, use:
+
+git add main.c
+git commit -m "Describe your changes"
+git push
+
+That's it.
+
+Your 2D Graphics Editor project is now properly connected to GitHub and your latest code is stored online. ✅
